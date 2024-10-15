@@ -49,7 +49,7 @@ export const Page: ComponentPrototypeType = {
   ],
   rules: {
     canMoveIn(incomingName) {
-      return ['Section', 'Columns', 'Box', 'When'].includes(incomingName);
+      return ['Section', 'Columns', 'Box', 'When', 'Page', 'ScrollView', 'View'].includes(incomingName);
     },
   },
 };
