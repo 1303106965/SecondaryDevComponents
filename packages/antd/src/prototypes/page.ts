@@ -49,6 +49,8 @@ export const Page: ComponentPrototypeType = {
   ],
   rules: {
     canMoveIn(incomingName) {
+      console.log(incomingName,'incomingName');
+      
       return ['Section', 'Columns', 'Box', 'When', 'Page', 'ScrollView', 'View'].includes(incomingName);
     },
   },

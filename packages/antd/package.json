@@ -47,8 +47,10 @@
     "@music163/tango-boot": "^0.3.3",
     "@music163/tango-helpers": "^1.2.4",
     "antd": "4",
+    "babel-plugin-module-resolver": "^5.0.2",
     "classnames": "^2.3.2",
-    "coral-system": "^1.0.6"
+    "coral-system": "^1.0.6",
+    "react-native-web": "^0.19.13"
   },
   "gitHead": "3ad958237a4a81a2410a9b08abef73a411cc5756"
 }

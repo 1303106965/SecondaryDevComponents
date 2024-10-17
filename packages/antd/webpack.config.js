@@ -25,6 +25,13 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+        },
+        exclude: /node_modules/,
+      },
+      {
         test: /\.less$/i,
         use: [
           // compiles Less to CSS
@@ -46,6 +53,10 @@ module.exports = {
   plugins: [new ProgressBarPlugin()],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      'react-native': 'react-native-web',
+    },
+    enforceExtension: false,
   },
   externals: {
     react: 'React',
@@ -62,3 +73,4 @@ module.exports = {
     umdNamedDefine: true,
   },
 };
+console.log();
