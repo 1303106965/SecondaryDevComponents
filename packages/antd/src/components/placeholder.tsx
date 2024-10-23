@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'coral-system';
-import { Box, BoxProps } from '@music163/foundation';
+import { Box, BoxProps } from '../../../foundation/src/index';
 import { defineComponent } from '@music163/tango-boot';
 import { TangoEventButton } from './tango-event-button';
 
@@ -59,7 +59,9 @@ function PlaceholderView({
   const height = sizeMap[size];
   return (
     <Box className="tango-placeholder" height={height} css={placeholderStyle} {...rest}>
-      <TangoEventButton type="text" payload={{ type: 'addComponent' }}>{placeholder} </TangoEventButton>
+      <TangoEventButton type="text" payload={{ type: 'addComponent' }}>
+        {placeholder}{' '}
+      </TangoEventButton>
     </Box>
   );
 }

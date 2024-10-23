@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Box, BoxProps } from '@music163/foundation';
+import { Box, BoxProps } from '../../../foundation/src/index';
 import { defineComponent } from '@music163/tango-boot';
 import { Placeholder } from './placeholder';
 

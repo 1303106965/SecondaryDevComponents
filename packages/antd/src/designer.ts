@@ -6,15 +6,16 @@ export const menuData = {
   common: [
     {
       title: '基本',
-      items: ['Button', 'Section', 'Box', 'Columns', 'Space', 'Typography', 'Title', 'Paragraph'],
+      // items: ['Button', 'Section', 'Box', 'Columns', 'Space', 'Typography', 'Title', 'Paragraph'],
+      items: ['Button','AntdButton', 'Section']
     },
-    {
-      title: '输入',
-      items: ['Input', 'InputNumber', 'Select'],
-    },
-    {
-      title: 'Formily表单',
-      items: ['FormilyForm', 'FormilyFormItem', 'FormilySubmit', 'FormilyReset'],
-    }
+    // {
+    //   title: '输入',
+    //   items: ['Input', 'InputNumber', 'Select'],
+    // },
+    // {
+    //   title: 'Formily表单',
+    //   items: ['FormilyForm', 'FormilyFormItem', 'FormilySubmit', 'FormilyReset'],
+    // }
   ],
 };
