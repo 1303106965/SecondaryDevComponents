@@ -1,0 +1,40 @@
+import React from 'react';
+import cx from 'classnames';
+import { Box, BoxProps } from '../../../foundation/src/index';
+import { defineComponent } from '@music163/tango-boot';
+import { Placeholder } from './placeholder';
+
+export interface ViewProps extends Omit<BoxProps, 'title'> {
+  title?: React.ReactNode;
+}
+
+function AndroidView({ title, className, children, ...rest }: ViewProps) {
+  return (
+    <Box
+      as="section"
+      className={cx('td-section', className)}
+      bg="#FFF"
+      borderRadius="2px"
+      {...rest}
+    >
+      {title && (
+        <Box p="24px 24px 0" fontSize="16px" fontWeight="500">
+          {title}
+        </Box>
+      )}
+      <Box p="24px">{children}</Box>
+    </Box>
+  );
+}
+
+export const View = defineComponent(AndroidView, {
+  designerConfig: {
+    render({ children, designerProps, originalProps }) {
+      return React.cloneElement(children, {
+        children: <Placeholder />,
+        ...originalProps,
+        ...designerProps,
+      });
+    },
+  },
+});

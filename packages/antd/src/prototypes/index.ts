@@ -66,3 +66,4 @@ export * from './tree-select';
 export * from './tree';
 export * from './typography';
 export * from './upload';
+export * from './view'

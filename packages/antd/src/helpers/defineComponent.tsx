@@ -121,11 +121,9 @@ export function defineComponent<P = any>(
 
   const isFC = isFunctionComponent(BaseComponent);
   const isDesignMode = isInTangoDesignMode();
-  console.log(options, 'yibuyibulai89898989898989');
   // 这里包上 view ，能够响应 model 变化
   const InnerModelComponent = view((props: P & TangoModelComponentProps) => {
     const ref = useRef();
-
     const stateConfig = options?.registerState || {};
 
     const getPageStates = stateConfig.getInitStates || registerEmpty;
@@ -183,15 +181,28 @@ export function defineComponent<P = any>(
   const TangoComponent = forwardRef<unknown, P & TangoComponentProps>((props, ref) => {
     const { tid } = props;
     const refs = isFC ? undefined : ref;
+    console.log(isDesignMode, 'isDesignModeisDesignMode');
 
-    let renderComponent: (defaultProps?: P) => React.ReactElement;
+    let renderComponent: (defaultProps?: any) => React.ReactElement;
     if (options?.registerState && tid) {
+      console.log(options?.registerState, tid, '!!!!!!!!!!!!');
+
       renderComponent = (defaultProps: P) =>
         React.createElement(InnerModelComponent, { innerRef: refs, ...defaultProps, ...props });
     } else {
       let androidObj = options?.platform === 'android' ? { title: options.name } : {};
-      renderComponent = (defaultProps: P) =>
-        React.createElement(BaseComponent, { ref: refs, ...defaultProps, ...props, ...androidObj });
+      renderComponent = (defaultProps: P) => {
+        console.log(
+          { ref: refs, BaseComponent, defaultProps, ...props, ...androidObj },
+          '{ ref: refs, ...props, ...androidObj }',
+        );
+        return React.createElement(BaseComponent, {
+          ref: refs,
+          ...props,
+          ...androidObj,
+          style: { ...defaultProps?.style, pointerEvents: isDesignMode ? 'none' : 'auto' },
+        });
+      };
     }
 
     if (isDesignMode) {
@@ -211,6 +222,8 @@ export function defineComponent<P = any>(
       }
 
       if (designerConfig.hasWrapper) {
+        console.log(ret, '-=-=-=-=-');
+
         return (
           <DndBox
             name={displayName}
@@ -222,6 +235,7 @@ export function defineComponent<P = any>(
           </DndBox>
         );
       } else {
+        console.log(overrideProps, designerProps, '----defaultProps3----');
         return renderComponent({
           ...overrideProps,
           ...designerProps,
@@ -229,7 +243,9 @@ export function defineComponent<P = any>(
       }
     } else {
       // normal mode
-      return renderComponent();
+      return renderComponent({
+        ...designerConfig.defaultProps,
+      } as any);
     }
   });
 

@@ -10,6 +10,7 @@ export { AntdButton } from './antdbutton'
 export * from './page';
 // export * from './placeholder';
 export * from './section';
+export * from './view'
 // export { Select } from './select';
 // export { Space } from './space';
 // export { Typography, Title, Paragraph } from './typography';
