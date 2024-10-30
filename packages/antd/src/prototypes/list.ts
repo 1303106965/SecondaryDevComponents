@@ -7,7 +7,7 @@ export const List: ComponentPrototypeType = {
   title: '列表',
   package: '@music163/antd',
   icon: 'icon-liebiao',
-  help: '最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面',
+  help: 'Android组件FlatList最基础的列表展示',
   type: 'element',
   hasChildren: true,
   childrenName: 'ListItem',

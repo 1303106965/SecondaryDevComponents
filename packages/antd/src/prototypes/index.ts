@@ -31,7 +31,6 @@ export * from './input-number';
 export * from './input';
 export * from './interval';
 export * from './link';
-export * from './list';
 export * from './mentions';
 export * from './menu';
 export * from './modal';
@@ -67,3 +66,4 @@ export * from './tree';
 export * from './typography';
 export * from './upload';
 export * from './view'
+export * from './list'

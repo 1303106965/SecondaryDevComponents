@@ -3,11 +3,11 @@ import { CommonSystemStylePrototypes, StylePrototypes } from './common';
 
 export const View: ComponentPrototypeType = {
   name: 'Section',
-  title: '布局区块',
+  title: 'Android布局区块',
   icon: 'icon-mianban',
   type: 'element',
   package: '@music163/antd',
-  help: '区域容器，可以用来将页面划分成多个区域，每个区域放置具体的内容模块。',
+  help: '安卓区域容器，可以用来将页面划分成多个区域，每个区域放置具体的内容模块。',
   hasChildren: true,
   initChildren: '',
   props: [

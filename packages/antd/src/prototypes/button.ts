@@ -8,7 +8,7 @@ export const Button: ComponentPrototypeType = {
   icon: 'icon-anniu',
   type: 'element',
   package: '@music163/antd',
-  help: '按钮用于开始一个即时操作。',
+  help: 'Android端按钮组件',
   hasChildren: false,
   props: [
     {

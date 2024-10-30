@@ -1,8 +1,10 @@
 // export * from 'antd';
 // export { Each, Link, Text, When } from '@music163/foundation';
-// export { Box } from './box';
+export { Box } from './box';
 export { Button } from './button';
-export { AntdButton } from './antdbutton'
+export { AntdButton } from './antdbutton';
+export { List } from './list';
+export { Text } from './text';
 // export * from './formily';
 // export { InputNumber } from './input-number';
 // export { Input, TextArea } from './input';

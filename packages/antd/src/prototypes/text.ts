@@ -1,6 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 import { StylePrototypes } from './common';
-
 export const Text: ComponentPrototypeType = {
   name: 'Text',
   title: '文本',

@@ -200,7 +200,10 @@ export function defineComponent<P = any>(
           ref: refs,
           ...props,
           ...androidObj,
-          style: { ...defaultProps?.style, pointerEvents: isDesignMode ? 'none' : 'auto' },
+          style: {
+            ...defaultProps?.style,
+            pointerEvents: isDesignMode && options?.platform === 'android' ? 'none' : 'auto',
+          },
         });
       };
     }
