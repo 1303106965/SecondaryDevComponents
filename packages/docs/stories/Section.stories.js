@@ -1,4 +1,4 @@
-import { Section } from '@music163/antd';
+import { Section } from 'snwit-android-components';
 
 export default {
   title: 'antd/Section',

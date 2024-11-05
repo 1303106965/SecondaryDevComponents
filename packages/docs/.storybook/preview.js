@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import '@music163/antd/lib/esm/index.less';
+import 'snwit-android-components/lib/esm/index.less';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

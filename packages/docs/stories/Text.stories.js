@@ -1,4 +1,4 @@
-import { Text } from '@music163/antd';
+import { Text } from 'snwit-android-components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

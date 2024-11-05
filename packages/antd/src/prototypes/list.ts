@@ -1,11 +1,10 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 import { StylePrototypes } from './common';
-import { Pagination } from './pagination';
 
 export const List: ComponentPrototypeType = {
   name: 'List',
   title: '列表',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   icon: 'icon-liebiao',
   help: 'Android组件FlatList最基础的列表展示',
   type: 'element',
@@ -24,7 +23,20 @@ export const List: ComponentPrototypeType = {
       name: 'dataSource',
       title: '列表数据源',
       setter: 'expressionSetter',
-      initValue: ['Racing car sprays burning fuel into crowd.'],
+      initValue: [
+        {
+          id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+          title: 'First Item',
+        },
+        {
+          id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+          title: 'Second Item',
+        },
+        {
+          id: '58694a0f-3da1-471f-bd96-145571e29d72',
+          title: 'Third Item',
+        },
+      ]
     },
     { name: 'footer', title: '列表底部', setter: 'expressionSetter' },
     { name: 'grid', title: '列表栅格配置', setter: 'expressionSetter' },
@@ -46,11 +58,6 @@ export const List: ComponentPrototypeType = {
       title: '默认文案设置',
       group: 'advanced',
       setter: 'expressionSetter',
-    },
-    {
-      name: 'pagination',
-      title: '翻页配置',
-      props: Pagination.props,
     },
     {
       name: 'renderItem',
@@ -92,7 +99,7 @@ export const List: ComponentPrototypeType = {
 export const ListItem: ComponentPrototypeType = {
   name: 'ListItem',
   title: '列表Item',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   icon: 'icon-shujuzhanshiitem',
   type: 'element',
   hasChildren: true,
@@ -117,7 +124,7 @@ export const ListItem: ComponentPrototypeType = {
 export const ListItemMeta: ComponentPrototypeType = {
   name: 'ListItemMeta',
   title: '列表Item',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   icon: '',
   type: 'element',
   relatedImports: ['Avatar'],

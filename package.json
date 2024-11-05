@@ -8,7 +8,7 @@
   "scripts": {
     "start": "yarn workspace docs storybook",
     "build": "lerna run build",
-    "serve": "yarn workspace @music163/antd serve",
+    "serve": "yarn workspace snwit-android-components serve",
     "serve:mail": "yarn workspace @music163/tango-mail serve",
     "test": "jest",
     "test:watch": "jest --watch",

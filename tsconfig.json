@@ -9,8 +9,8 @@
     "paths": {
       "@music163/foundation": ["packages/foundation/src/index.ts"],
       "@music163/formily": ["packages/formily/src/index.ts"],
-      "@music163/antd/lib/esm/designer": ["packages/antd/src/designer.ts"],
-      "@music163/antd": ["packages/antd/src/index.ts"],
+      "snwit-android-components/lib/esm/designer": ["packages/antd/src/designer.ts"],
+      "snwit-android-components": ["packages/antd/src/index.ts"],
       "@music163/tango-mail": ["packages/mail/src/index.ts"]
     }
   }

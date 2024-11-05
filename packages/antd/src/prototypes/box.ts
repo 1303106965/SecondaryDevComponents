@@ -6,7 +6,7 @@ export const Box: ComponentPrototypeType = {
   title: '盒子',
   icon: 'icon-mianban',
   type: 'container',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   hasChildren: true,
   siblingNames: ['Box'],
   props: [

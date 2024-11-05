@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Space } from '@music163/antd';
+import { Button, ButtonGroup, Space } from 'snwit-android-components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

@@ -1,5 +1,5 @@
 import tango, { defineStore } from '@music163/tango-boot';
-import { Input } from '@music163/antd';
+import { Input } from 'snwit-android-components';
 
 export default {
   title: 'apps/Counter',

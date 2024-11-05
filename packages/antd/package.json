@@ -1,15 +1,15 @@
 {
-  "name": "@music163/antd",
-  "version": "0.2.10",
-  "description": "antd components for tango app",
+  "name": "snwit-android-components",
+  "version": "0.0.1",
+  "description": "初版测试组件接入expo",
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/netease/tango-components#readme",
   "license": "MIT",
   "exports": {
     ".": "./lib/cjs/index.js",
-    "./es": "./lib/esm/index.js",
-    "./designer": "./lib/esm/designer.js",
-    "./prototypes": "./lib/esm/prototypes/index.js"
+    "./es": "./lib/esm/antd/src/index.js",
+    "./designer": "./lib/esm/antd/src/designer.js",
+    "./prototypes": "./lib/esm/antd/src/prototypes/index.js"
   },
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -42,7 +42,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@music163/formily": "^0.2.4",
     "@music163/foundation": "^0.2.3",
     "@music163/tango-boot": "^0.3.3",
     "@music163/tango-helpers": "^1.2.4",

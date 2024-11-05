@@ -7,7 +7,7 @@ export const AntdButton: ComponentPrototypeType = {
   exportType: 'namedExport',
   icon: 'icon-anniu',
   type: 'element',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   help: 'web端按钮组件',
   hasChildren: false,
   props: [

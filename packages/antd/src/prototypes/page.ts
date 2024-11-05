@@ -5,7 +5,7 @@ export const Page: ComponentPrototypeType = {
   title: '页面容器',
   icon: 'icon-page',
   type: 'page',
-  package: '@music163/antd',
+  package: 'snwit-android-components',
   hasChildren: true,
   props: [
     {

@@ -4,7 +4,7 @@ import {
   FormilySubmit,
   FormilyReset,
   FormilyFormFooter,
-} from '@music163/antd';
+} from 'snwit-android-components';
 
 export default {
   title: 'antd/Formily',

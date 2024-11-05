@@ -1,4 +1,4 @@
-import { Modal } from '@music163/antd';
+import { Modal } from 'snwit-android-components';
 
 export default {
   title: 'antd/Modal',

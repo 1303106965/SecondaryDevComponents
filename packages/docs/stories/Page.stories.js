@@ -1,4 +1,4 @@
-import { Column, Columns, Page, Section } from '@music163/antd';
+import { Column, Columns, Page, Section } from 'snwit-android-components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
