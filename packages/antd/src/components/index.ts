@@ -1,4 +1,3 @@
-export { Box } from './box';
 export { Button } from './button';
 export { AntdButton } from './antdbutton';
 export { List } from './list';
