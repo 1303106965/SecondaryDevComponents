@@ -13,6 +13,5 @@
       "snwit-android-components": ["packages/antd/src/index.ts"],
       "@music163/tango-mail": ["packages/mail/src/index.ts"]
     }
-  },
-  "references": [{ "path": "./packages/foundation" }]
+  }
 }

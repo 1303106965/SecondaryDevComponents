@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { css } from 'coral-system';
-import { Box, BoxProps } from '../../../foundation/src/index';
+import { Box, BoxProps } from './box';
 import { PageHeader, PageHeaderProps } from 'antd';
 import { defineComponent } from '@music163/tango-boot';
 

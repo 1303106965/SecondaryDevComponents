@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "babel-plugin-react-native-web": "^0.19.13",
-    "react-native-web": "^0.19.13"
+    "react-native-web": "^0.19.13",
+    "snwit-android-components": "latest"
   }
 }
