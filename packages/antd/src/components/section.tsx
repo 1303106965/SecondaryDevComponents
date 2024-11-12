@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { Box, BoxProps } from './box';
-import { defineComponent } from '@music163/tango-boot';
+import { defineComponent } from '../helpers';
 import { Placeholder } from './placeholder';
 
 export interface SectionProps extends Omit<BoxProps, 'title'> {

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { css } from 'coral-system';
 import { Box, BoxProps } from './box';
 import { PageHeader, PageHeaderProps } from 'antd';
-import { defineComponent } from '@music163/tango-boot';
+import { defineComponent } from '../helpers';
 
 const pageStyle = css`
   .td-pageHeader {

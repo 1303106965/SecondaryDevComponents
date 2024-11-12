@@ -5,21 +5,9 @@ import { Platform, StyleSheet } from 'react-native';
 import { defineComponent } from '../helpers';
 import { Button as AntButton } from 'antd';
 import { TouchableOpacity, Text } from 'react-native';
-// export const MyButton = (props: any) => {
-//   // if (Platform.OS === 'web') {
-//   //   return <AntButton {...props} />;
-//   // }
-//   console.log(Platform.OS, 'Platform.OSPlatform.OSPlatform.OS');
-
-//   return <RNButton {...props} />;
-// };
 function RNButton({ ...props }: any) {
-  console.log(props, 'rnbutton');
   const clickHandle = () => {
-    debugger;
-    console.log('btnP.................', props, props.onClick);
-
-    props.onClick();
+    props.onClick() || null;
   };
   return (
     <TouchableOpacity {...props} onPress={clickHandle}>

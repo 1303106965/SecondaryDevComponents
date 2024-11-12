@@ -62,7 +62,6 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
     moment: 'moment',
-    '@music163/tango-boot': 'TangoBoot',
   },
   output: {
     filename: '[name].js',
