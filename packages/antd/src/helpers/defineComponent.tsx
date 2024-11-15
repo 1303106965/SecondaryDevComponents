@@ -115,6 +115,7 @@ export function defineComponent<P = any>(
   BaseComponent: React.ComponentType<P>,
   options?: DefineComponentConfig,
 ) {
+  debugger;
   const displayName =
     options?.name || BaseComponent.displayName || BaseComponent.name || 'TangoComponent';
   const designerConfig = options?.designerConfig || {};
@@ -181,21 +182,15 @@ export function defineComponent<P = any>(
   const TangoComponent = forwardRef<unknown, P & TangoComponentProps>((props, ref) => {
     const { tid } = props;
     const refs = isFC ? undefined : ref;
-    console.log(isDesignMode, 'isDesignModeisDesignMode');
-
     let renderComponent: (defaultProps?: any) => React.ReactElement;
     if (options?.registerState && tid) {
-      console.log(options?.registerState, tid, '!!!!!!!!!!!!');
-
+      console.log(props, 'nihuifaxiannihuiyayi!!!!!!!!!!!');
       renderComponent = (defaultProps: P) =>
         React.createElement(InnerModelComponent, { innerRef: refs, ...defaultProps, ...props });
     } else {
       let androidObj = options?.platform === 'android' ? { title: options.name } : {};
+      console.log(props, 'toutoudekanzheni!!!!!!!!!!!');
       renderComponent = (defaultProps: P) => {
-        console.log(
-          { ref: refs, BaseComponent, defaultProps, ...props, ...androidObj },
-          '{ ref: refs, ...props, ...androidObj }',
-        );
         return React.createElement(BaseComponent, {
           ref: refs,
           ...props,
@@ -225,8 +220,6 @@ export function defineComponent<P = any>(
       }
 
       if (designerConfig.hasWrapper) {
-        console.log(ret, '-=-=-=-=-');
-
         return (
           <DndBox
             name={displayName}

@@ -16,29 +16,7 @@ export const Page: ComponentPrototypeType = {
     {
       name: 'subTitle',
       title: '副标题',
-      setter: 'jsxSetter',
-    },
-    {
-      name: 'extra',
-      title: '标题栏右侧附加内容',
-      setter: 'jsxSetter',
-    },
-    {
-      name: 'headerFooter',
-      title: '标题栏底部附加内容',
-      setter: 'jsxSetter',
-    },
-    {
-      name: 'onMount',
-      title: '页面加载完成后执行',
-      setter: 'eventSetter',
-      group: 'event',
-    },
-    {
-      name: 'onUnmount',
-      title: '页面卸载前执行',
-      setter: 'eventSetter',
-      group: 'event',
+      setter: 'textSetter',
     },
     {
       name: 'bg',

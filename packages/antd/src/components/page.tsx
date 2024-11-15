@@ -1,63 +1,53 @@
+// @ts-nocheck
 import React, { useEffect } from 'react';
-import { css } from 'coral-system';
-import { Box, BoxProps } from './box';
-import { PageHeader, PageHeaderProps } from 'antd';
+import { View, Text, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 import { defineComponent } from '../helpers';
-
-const pageStyle = css`
-  .td-pageHeader {
-    background: #fff;
-  }
-
-  .td-pageContent > .td-section {
-    margin-bottom: 24px;
-  }
-`;
-
-export interface PageProps extends Omit<BoxProps, 'title'> {
-  title?: PageHeaderProps['title'];
-  subTitle?: PageHeaderProps['subTitle'];
-  headerExtra?: PageHeaderProps['extra'];
-  headerFooter?: PageHeaderProps['footer'];
-  /**
-   * 页面加载完成后执行的回调
-   */
-  onMount?: () => void;
-  /**
-   * 页面卸载前执行的回调
-   */
-  onUnmount?: () => void;
-}
-
-function View({
-  title,
-  subTitle,
-  headerExtra,
-  headerFooter,
-  children,
-  onMount,
-  onUnmount,
-  ...rest
-}: PageProps) {
-  useEffect(() => {
-    onMount?.();
-    return () => onUnmount?.();
-  }, []);
+// 获取屏幕的高度
+const { height } = Dimensions.get('window');
+const styles = StyleSheet.create({
+  page: {
+    backgroundColor: '#f0f2f5',
+    padding: 20,
+  },
+  titleBox: {
+    backgroundColor: '#fff',
+    padding: 10,
+    marginBottom: 20,
+    borderRadius: 4,
+  },
+  title: {
+    fontSize: 18,
+    color: '#333',
+    fontWeight: 600,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#999',
+  },
+});
+function RNScrollView(props: any) {
+  console.log(props, 'pagepagepage');
+  const { children, title, subTitle, rest, 'data-dnd': dndData } = props;
   return (
-    <Box bg="#f0f2f5" minHeight="100vh" css={pageStyle} {...rest}>
-      <PageHeader
-        className="td-pageHeader"
-        backIcon={false}
-        title={title}
-        subTitle={subTitle}
-        extra={headerExtra}
-        footer={headerFooter}
-      />
-      <Box className="td-pageContent" p="24px">
-        {children}
-      </Box>
-    </Box>
+    // 兼容状态栏SafeAreaView
+    <SafeAreaView>
+      {/* 提供设计器功能 */}
+      <View {...props} style={[styles.page, { minHeight: height }]}>
+        <View style={styles.titleBox}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>{subTitle}</Text>
+        </View>
+        <View>{children}</View>
+      </View>
+    </SafeAreaView>
   );
 }
 
-export const Page = defineComponent(View);
+export const Page = defineComponent(RNScrollView, {
+  name: 'Page',
+  platform: 'android',
+  designerConfig: {
+    display: 'block',
+    hasWrapper: true,
+  },
+});
