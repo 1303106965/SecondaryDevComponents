@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   view: {
     flex: 1,
     backgroundColor: '#fff',
-    heigh: 300,
+    height: 300,
   },
 });
 export const View = defineComponent(androidView, {

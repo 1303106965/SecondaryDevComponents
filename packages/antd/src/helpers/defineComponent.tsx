@@ -193,8 +193,8 @@ export function defineComponent<P = any>(
       renderComponent = (defaultProps: P) => {
         return React.createElement(BaseComponent, {
           ref: refs,
-          ...props,
           ...androidObj,
+          ...props,
           style: {
             ...defaultProps?.style,
             pointerEvents: isDesignMode && options?.platform === 'android' ? 'none' : 'auto',

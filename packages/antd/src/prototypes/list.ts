@@ -9,9 +9,6 @@ export const List: ComponentPrototypeType = {
   help: 'Android组件FlatList最基础的列表展示',
   type: 'element',
   hasChildren: true,
-  childrenName: 'ListItem',
-  relatedImports: ['ListItem'],
-  initChildren: '<ListItem /><ListItem />',
   props: [
     ...StylePrototypes,
     {
@@ -103,7 +100,7 @@ export const ListItem: ComponentPrototypeType = {
   icon: 'icon-shujuzhanshiitem',
   type: 'element',
   hasChildren: true,
-  childrenName: ['ListItemMeta', 'Text', 'Box'],
+  childrenName: ['ListItemMeta', 'Text'],
   props: [
     ...StylePrototypes,
     {

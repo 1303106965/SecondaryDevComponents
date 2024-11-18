@@ -1,6 +1,6 @@
 {
   "name": "snwit-android-components",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "description": "初版测试组件接入expo",
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/1303106965/SecondaryDevComponents/blob/main/README.md",
@@ -11,6 +11,7 @@
     "./designer": "./lib/esm/designer.js",
     "./prototypes": "./lib/esm/prototypes/index.js"
   },
+  "main": "lib/esm/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "files": [
@@ -31,8 +32,7 @@
     "copy:less": "yarn copy:less2esm && yarn copy:less2cjs && yarn copy:less2dist",
     "copy:less2esm": "copyfiles -u 1 src/**/*.less lib/esm",
     "copy:less2cjs": "copyfiles -u 1 src/**/*.less lib/cjs",
-    "copy:less2dist": "copyfiles -u 1 src/**/*.less dist",
-    "prepublishOnly": "yarn build"
+    "copy:less2dist": "copyfiles -u 1 src/**/*.less dist"
   },
   "publishConfig": {
     "access": "public",

@@ -5,7 +5,7 @@ import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Platform } f
 import { defineComponent } from '../helpers';
 const Item = ({ title }) => (
   <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
+    <Text style={styles.title}>{title || 'noTitle'}</Text>
   </View>
 );
 const RNList = (props) => {
@@ -26,7 +26,7 @@ const RNList = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={props.data || DATA}
+        data={props.dataSource || DATA}
         renderItem={({ item }) => <Item title={item.title} />}
         keyExtractor={(item) => item.id}
       />
