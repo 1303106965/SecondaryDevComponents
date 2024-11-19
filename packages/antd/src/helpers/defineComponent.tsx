@@ -224,7 +224,10 @@ export function defineComponent<P = any>(
           <DndBox
             name={displayName}
             display={designerConfig.display}
-            style={options.designerConfig?.wrapperStyle}
+            style={[
+              options.designerConfig?.wrapperStyle,
+              { alignSelf: designerConfig.display !== 'block' ? 'flex-start' : '' },
+            ]}
             {...designerProps}
           >
             {ret}
