@@ -5,7 +5,9 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
 function RNButton({ ...props }: any) {
   const clickHandle = () => {
-    props.onClick() || null;
+    if (props.onClick) {
+      props.onClick();
+    }
   };
   return (
     <TouchableOpacity {...props} onPress={clickHandle}>
