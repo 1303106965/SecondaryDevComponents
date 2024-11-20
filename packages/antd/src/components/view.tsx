@@ -4,7 +4,6 @@ import { View as androidView, StyleSheet } from 'react-native';
 import { defineComponent } from '../helpers';
 const styles = StyleSheet.create({
   view: {
-    flex: 1,
     backgroundColor: '#fff',
     height: 300,
   },

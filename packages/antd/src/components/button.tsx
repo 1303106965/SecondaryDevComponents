@@ -1,10 +1,8 @@
 // components/MyButton.js
 //@ts-nocheck
 import React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
-import { Button as AntButton } from 'antd';
-import { TouchableOpacity, Text } from 'react-native';
 function RNButton({ ...props }: any) {
   const clickHandle = () => {
     props.onClick() || null;

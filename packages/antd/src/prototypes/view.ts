@@ -3,7 +3,7 @@ import { CommonSystemStylePrototypes, StylePrototypes } from './common';
 
 export const View: ComponentPrototypeType = {
   name: 'View',
-  title: 'Android布局区块',
+  title: '布局区块',
   icon: 'icon-mianban',
   type: 'element',
   package: 'snwit-android-components',

@@ -1,12 +1,14 @@
+// @ts-nocheck
 import React from 'react';
 import {
   TangoEventName,
   dispatchTangoEvent,
   ComponentPrototypeType,
 } from '@music163/tango-helpers';
-import { Button, ButtonProps } from 'antd';
+import { TouchableOpacity } from 'react-native';
 
-export interface TangoEventButtonProps extends ButtonProps {
+export interface TangoEventButtonProps {
+  children?: any;
   payload?: {
     type: 'insertChild' | 'replaceNode' | 'selectNode' | 'addComponent';
     targetId?: string;
@@ -24,8 +26,8 @@ export interface TangoEventButtonProps extends ButtonProps {
 
 export function TangoEventButton({ payload, children, ...rest }: TangoEventButtonProps) {
   return (
-    <Button
-      onClick={(e) => {
+    <TouchableOpacity
+      onPress={(e) => {
         const boundingData = (e.target as HTMLElement).getBoundingClientRect();
         const meta = {
           width: boundingData.width,
@@ -43,6 +45,6 @@ export function TangoEventButton({ payload, children, ...rest }: TangoEventButto
       {...rest}
     >
       {children}
-    </Button>
+    </TouchableOpacity>
   );
 }

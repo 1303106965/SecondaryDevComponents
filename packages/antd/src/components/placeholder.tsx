@@ -1,9 +1,9 @@
+//@ts-nocheck
 import React from 'react';
-import { css } from 'coral-system';
 import { Box, BoxProps } from './box';
-import { defineComponent } from '@music163/tango-boot';
+import { defineComponent } from '../helpers';
 import { TangoEventButton } from './tango-event-button';
-
+import { StyleSheet, Text } from 'react-native';
 export interface PlaceholderProps extends BoxProps {
   /**
    * 尺寸
@@ -26,29 +26,27 @@ export interface PlaceholderProps extends BoxProps {
   targetComponentName?: string;
 }
 
-const placeholderStyle = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #efefef;
-  color: #333;
-  border: 1px solid #666;
-  padding-left: 12px;
-  padding-right: 12px;
-  user-select: none;
-  overflow: hidden;
-  white-space: nowrap;
-
-  & ~ .tango-placeholder {
-    margin-top: 12px;
-  }
-`;
+const placeholderStyle = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#efefef',
+    color: '#333',
+    border: '1px solid #666',
+    paddingLeft: 12,
+    paddingRight: 12,
+    userSelect: 'none',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+});
 
 const sizeMap = {
-  small: '32px',
-  medium: '64px',
-  large: '80px',
+  small: '32',
+  medium: '64',
+  large: '80',
 };
 
 function PlaceholderView({
@@ -58,9 +56,9 @@ function PlaceholderView({
 }: PlaceholderProps) {
   const height = sizeMap[size];
   return (
-    <Box className="tango-placeholder" height={height} css={placeholderStyle} {...rest}>
+    <Box height={height} style={placeholderStyle.container} {...rest}>
       <TangoEventButton type="text" payload={{ type: 'addComponent' }}>
-        {placeholder}{' '}
+        <Text style={{ color: '#333', textAlign: 'center' }}>{placeholder}</Text>
       </TangoEventButton>
     </Box>
   );

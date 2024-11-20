@@ -115,7 +115,6 @@ export function defineComponent<P = any>(
   BaseComponent: React.ComponentType<P>,
   options?: DefineComponentConfig,
 ) {
-  debugger;
   const displayName =
     options?.name || BaseComponent.displayName || BaseComponent.name || 'TangoComponent';
   const designerConfig = options?.designerConfig || {};
@@ -224,10 +223,10 @@ export function defineComponent<P = any>(
           <DndBox
             name={displayName}
             display={designerConfig.display}
-            style={[
-              options.designerConfig?.wrapperStyle,
-              { alignSelf: designerConfig.display !== 'block' ? 'flex-start' : '' },
-            ]}
+            style={{
+              ...options.designerConfig?.wrapperStyle,
+              alignSelf: designerConfig.display !== 'block' ? 'flex-start' : '',
+            }}
             {...designerProps}
           >
             {ret}
