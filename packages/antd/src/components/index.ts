@@ -1,5 +1,5 @@
 export { Button } from './button';
-export { AntdButton } from './antdbutton';
+// export { AntdButton } from './antdbutton';
 export { List } from './list';
 export { Text } from './text';
 export {Page} from './page';

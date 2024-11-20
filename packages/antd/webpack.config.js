@@ -20,6 +20,9 @@ module.exports = {
               '@babel/preset-typescript',
               '@babel/preset-react',
             ],
+            plugins: [
+              'babel-plugin-react-native-web', // 在 Babel 配置中使用插件
+            ],
           },
         },
         exclude: /node_modules/,
@@ -50,11 +53,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ProgressBarPlugin()],
+  plugins: [new ProgressBarPlugin()], // 这里移除 'babel-plugin-react-native-web'
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      'react-native': 'react-native-web',
+      'react-native$': 'react-native-web', // 确保 React Native 映射到 react-native-web
     },
     enforceExtension: false,
   },
@@ -72,4 +75,3 @@ module.exports = {
     umdNamedDefine: true,
   },
 };
-console.log();

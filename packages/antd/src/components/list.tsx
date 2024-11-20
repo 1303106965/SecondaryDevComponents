@@ -4,7 +4,7 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Platform } from 'react-native';
 import { defineComponent } from '../helpers';
 const Item = ({ title }) => (
-  <View style={styles.item}>
+  <View  style={styles.item}>
     <Text style={styles.title}>{title || 'noTitle'}</Text>
   </View>
 );
@@ -27,7 +27,7 @@ const RNList = (props) => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={props.dataSource || DATA}
-        renderItem={({ item }) => <Item title={item.title} />}
+        renderItem={({ item }) => <Item key={(item) => item.id} title={item.title} />}
         keyExtractor={(item) => item.id}
       />
     </SafeAreaView>
