@@ -1,11 +1,11 @@
-# `antd`
+# `snwit-compoents`
 
-> TODO: description
+> 分离组件模块
 
 ## Usage
 
 ```
-const antd = require('antd');
+import {Button} = 'snwit-android-components'
 
 // TODO: DEMONSTRATE API
 ```
