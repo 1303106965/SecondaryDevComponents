@@ -11,12 +11,6 @@ export const StylePrototypes: ComponentPropType[] = [
     group: 'style',
     autoCompleteOptions: ['{}'],
   },
-  {
-    name: 'className',
-    title: '自定义样式类名',
-    setter: 'classNameSetter',
-    group: 'style',
-  },
 ];
 
 export const InstancePrototypes: ComponentPropType[] = [

@@ -38,12 +38,7 @@ export const Section: ComponentPrototypeType = {
         max: 24,
         min: 1,
       },
-    },
-    {
-      name: 'extra',
-      title: '页头附加内容',
-      setter: 'jsxSetter',
-    },
+    }
   ],
   rules: {
     childrenContainerSelector: '.one-section-content',
