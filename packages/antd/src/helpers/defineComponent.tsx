@@ -183,12 +183,10 @@ export function defineComponent<P = any>(
     const refs = isFC ? undefined : ref;
     let renderComponent: (defaultProps?: any) => React.ReactElement;
     if (options?.registerState && tid) {
-      console.log(props, 'nihuifaxiannihuiyayi!!!!!!!!!!!');
       renderComponent = (defaultProps: P) =>
         React.createElement(InnerModelComponent, { innerRef: refs, ...defaultProps, ...props });
     } else {
       let androidObj = options?.platform === 'android' ? { title: options.name } : {};
-      console.log(props, 'toutoudekanzheni!!!!!!!!!!!');
       renderComponent = (defaultProps: P) => {
         return React.createElement(BaseComponent, {
           ref: refs,
