@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
 });
 function RNScrollView(props: any) {
   const { children, title, subTitle, rest, 'data-dnd': dndData } = props;
+  console.log(props, '###############page####props#################');
+
   return (
     // 兼容状态栏SafeAreaView
     <SafeAreaView>

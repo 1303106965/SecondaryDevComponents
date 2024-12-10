@@ -11013,6 +11013,18 @@ mlly@^1.7.2:
     pkg-types "^1.2.0"
     ufo "^1.5.4"
 
+mobx-react-lite@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.npmjs.org/mobx-react-lite/-/mobx-react-lite-4.0.7.tgz#f4e21e18d05c811010dcb1d3007e797924c4d90b"
+  integrity sha512-RjwdseshK9Mg8On5tyJZHtGD+J78ZnCnRaxeQDSiciKVQDUbfZcXhmld0VMxAwvcTnPEHZySGGewm467Fcpreg==
+  dependencies:
+    use-sync-external-store "^1.2.0"
+
+mobx@^6.13.5:
+  version "6.13.5"
+  resolved "https://registry.npmjs.org/mobx/-/mobx-6.13.5.tgz#957d9df88c7f8b4baa7c6f8bdcb6d68b432a6ed5"
+  integrity sha512-/HTWzW2s8J1Gqt+WmUj5Y0mddZk+LInejADc79NJadrWla3rHzmRHki/mnEUH1AvOmbNTZ1BRbKxr8DSgfdjMA==
+
 modify-values@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
@@ -13719,7 +13731,16 @@ smart-buffer@^4.2.0:
   resolved "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
-snwit-android-components@^0.1.0, snwit-android-components@latest:
+snwit-android-components@^0.1.0:
+  version "0.0.42"
+  dependencies:
+    "@music163/foundation" "^0.2.3"
+    "@music163/tango-helpers" "^1.2.4"
+    antd "4"
+    classnames "^2.3.2"
+    coral-system "^1.0.6"
+
+snwit-android-components@latest:
   version "0.0.5"
   resolved "https://registry.npmjs.org/snwit-android-components/-/snwit-android-components-0.0.5.tgz#00bfe4c203d03cad4fea72ad6b9487c10c43ebd8"
   integrity sha512-7BWbu2g33iFG21t1Ar87fWGAJHTiEdlYhtZ/Mm2bGAndKHyuLImbBMSSLRjFZhmin7ITIAkALfV8f/yVycqaaA==
@@ -14872,6 +14893,11 @@ use-sidecar@^1.1.2:
   dependencies:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
+
+use-sync-external-store@^1.2.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.4.0.tgz#adbc795d8eeb47029963016cefdf89dc799fcebc"
+  integrity sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

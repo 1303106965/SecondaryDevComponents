@@ -3,10 +3,13 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
-function RNButton({ ...props }: any) {
+import { observer } from 'mobx-react-lite';
+import { ButtonStore } from '../store/button';
+
+const RNButton = observer((props) => {
   const clickHandle = () => {
-    if (props.onClick) {
-      props.onClick();
+    if (ButtonStore.onClick) {
+      // store.onClick();
     }
   };
   return (
@@ -14,13 +17,13 @@ function RNButton({ ...props }: any) {
       <Text style={{ color: '#fff' }}>{props.children}</Text>
     </TouchableOpacity>
   );
-}
+});
 
 const style = StyleSheet.create({
   btnStyle: {
     height: 40,
     width: 160,
-    backgroundColor: '#006cbe',
+    backgroundColor: '#f194ff',
     color: '#fff',
     display: 'flex',
     justifyContent: 'center',
