@@ -1,15 +1,12 @@
 // components/MyButton.js
-//@ts-nocheck
 import React from 'react';
+// @ts-ignore
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
-import { observer } from 'mobx-react-lite';
-import { ButtonStore } from '../store/button';
-
-const RNButton = observer((props) => {
+const RNButton = (props: any) => {
   const clickHandle = () => {
-    if (ButtonStore.onClick) {
-      // store.onClick();
+    if (props.onClick) {
+      props.onClick();
     }
   };
   return (
@@ -17,7 +14,7 @@ const RNButton = observer((props) => {
       <Text style={{ color: '#fff' }}>{props.children}</Text>
     </TouchableOpacity>
   );
-});
+};
 
 const style = StyleSheet.create({
   btnStyle: {
