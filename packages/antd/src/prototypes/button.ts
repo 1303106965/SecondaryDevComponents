@@ -112,6 +112,12 @@ export const Button: ComponentPrototypeType = {
         { label: '新页面', value: '_blank' },
       ],
     },
+    {
+      name: 'bg',
+      title: '背景',
+      setter: 'bgSetter',
+      group: 'style',
+    },
   ],
   rules: {},
 };
