@@ -3,19 +3,6 @@ import React from 'react';
 // @ts-ignore
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
-const RNButton = (props: any) => {
-  const clickHandle = () => {
-    if (props.onClick) {
-      props.onClick();
-    }
-  };
-  return (
-    <TouchableOpacity {...props} onPress={clickHandle}>
-      <Text style={{ color: '#fff' }}>{props.children}</Text>
-    </TouchableOpacity>
-  );
-};
-
 const style = StyleSheet.create({
   btnStyle: {
     height: 40,
@@ -27,14 +14,24 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
 });
+const RNButton = (props: any) => {
+  const clickHandle = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  };
+  return (
+    <TouchableOpacity {...props} style={[style.btnStyle, props.style]} onPress={clickHandle}>
+      <Text style={{ color: '#fff' }}>{props.children}</Text>
+    </TouchableOpacity>
+  );
+};
+
 export const Button = defineComponent(RNButton, {
   name: 'Button',
   platform: 'android',
   designerConfig: {
     display: 'inline-block',
     hasWrapper: true,
-    defaultProps: {
-      style: style.btnStyle,
-    },
   },
 });

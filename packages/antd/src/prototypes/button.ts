@@ -113,7 +113,7 @@ export const Button: ComponentPrototypeType = {
       ],
     },
     {
-      name: 'bg',
+      name: 'backgroundColor',
       title: '背景',
       setter: 'bgSetter',
       group: 'style',

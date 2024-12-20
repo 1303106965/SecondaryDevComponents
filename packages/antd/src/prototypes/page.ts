@@ -19,7 +19,7 @@ export const Page: ComponentPrototypeType = {
       setter: 'textSetter',
     },
     {
-      name: 'bg',
+      name: 'backgroundColor',
       title: '背景',
       setter: 'bgSetter',
       group: 'style',

@@ -1,6 +1,6 @@
 {
   "name": "snwit-android-components",
-  "version": "0.0.51",
+  "version": "0.1.11",
   "description": "初版测试组件接入expo",
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/1303106965/SecondaryDevComponents/blob/main/README.md",
@@ -41,7 +41,6 @@
   "dependencies": {
     "@music163/foundation": "^0.2.3",
     "@music163/tango-helpers": "^1.2.4",
-    "antd": "4",
     "classnames": "^2.3.2",
     "coral-system": "^1.0.6"
   }
