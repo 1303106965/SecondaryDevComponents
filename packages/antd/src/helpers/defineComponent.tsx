@@ -194,6 +194,7 @@ export function defineComponent<P = any>(
           ...props,
           style: {
             ...defaultProps?.style,
+            ...(props.style || {}),
             pointerEvents: isDesignMode && options?.platform === 'android' ? 'none' : 'auto',
           },
         });
