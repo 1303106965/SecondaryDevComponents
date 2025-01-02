@@ -1,10 +1,10 @@
 // components/MyButton.js
 //@ts-nocheck
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Platform } from 'react-native';
+import { View, FlatList, StyleSheet, Text, StatusBar, Platform } from 'react-native';
 import { defineComponent } from '../helpers';
 const Item = ({ title }) => (
-  <View  style={styles.item}>
+  <View style={styles.item}>
     <Text style={styles.title}>{title || 'noTitle'}</Text>
   </View>
 );
@@ -24,13 +24,13 @@ const RNList = (props) => {
     },
   ];
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <FlatList
         data={props.dataSource || DATA}
         renderItem={({ item }) => <Item key={(item) => item.id} title={item.title} />}
         keyExtractor={(item) => item.id}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
