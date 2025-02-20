@@ -1,6 +1,6 @@
 //@ts-nocheck
-import React, { forwardRef, useEffect, useRef } from 'react';
-import { view } from '@risingstack/react-easy-state';
+import React, { forwardRef, useEffect, useRef, useMemo } from 'react';
+// import { view } from '@risingstack/react-easy-state';
 import {
   Dict,
   SLOT,
@@ -122,9 +122,9 @@ export function defineComponent<P = any>(
   const isFC = isFunctionComponent(BaseComponent);
   const isDesignMode = isInTangoDesignMode();
   // 这里包上 view ，能够响应 model 变化
-  const InnerModelComponent = view((props: P & TangoModelComponentProps) => {
+  const InnerModelComponent = (props: P & TangoModelComponentProps) => {
     const ref = useRef();
-    const stateConfig = options?.registerState || {};
+    const stateConfig = useMemo(() => options?.registerState || {}, [options?.registerState]);
 
     const getPageStates = stateConfig.getInitStates || registerEmpty;
     const { tid, innerRef, ...rest } = props;
@@ -175,7 +175,7 @@ export function defineComponent<P = any>(
         ref={mergeRefs(ref, innerRef)}
       />
     );
-  });
+  };
 
   // TIP: view 不支持 forwardRef，这里包一层，包到内部组件去消费，外层支持访问到原始的 ref，避免与原始代码产生冲突
   const TangoComponent = forwardRef<unknown, P & TangoComponentProps>((props, ref) => {

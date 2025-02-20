@@ -1,5 +1,5 @@
 // components/MyButton.js
-import React from 'react';
+import React, { memo } from 'react';
 // @ts-ignore
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { defineComponent } from '../helpers';
@@ -14,18 +14,18 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
 });
-const RNButton = (props: any) => {
+const RNButton = memo((props: any) => {
   const clickHandle = () => {
     if (props.onClick) {
       props.onClick();
     }
   };
   return (
-    <TouchableOpacity {...props} style={[style.btnStyle, props.style]} onPress={clickHandle}>
+    <TouchableOpacity style={[style.btnStyle, props.style]} onPress={clickHandle}>
       <Text style={{ color: '#fff' }}>{props.children}</Text>
     </TouchableOpacity>
   );
-};
+});
 
 export const Button = defineComponent(RNButton, {
   name: 'Button',
